@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from '../views/HomeScreen';
 import NestedScreen from '../views/NestedScreen';
+import ModalNoConnection from '../components/modal/NoConnection';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ const Navigator = () => {
   return (
     <NavigationContainer>
       <StackNavigator />
+      <ModalNoConnection />
     </NavigationContainer>
   );
 };
