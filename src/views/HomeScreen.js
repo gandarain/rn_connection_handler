@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Button} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 export default function HomeScreen() {
@@ -10,10 +10,11 @@ export default function HomeScreen() {
       <View style={{paddingBottom: 20}}>
         <Text>Home Screen</Text>
       </View>
-      <Button
-        title="Go to Nested Screen"
-        onPress={() => navigation.navigate('Nested')}
-      />
+      <TouchableOpacity
+        style={{padding: 20, backgroundColor: 'blue', borderRadius: 10}}
+        onPress={() => navigation.navigate('Nested')}>
+        <Text style={{color: 'white'}}>Go To Nested Screen</Text>
+      </TouchableOpacity>
     </View>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Button} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 export default function NestedScreen() {
@@ -10,10 +10,11 @@ export default function NestedScreen() {
       <View style={{paddingBottom: 20}}>
         <Text>Nested Screen</Text>
       </View>
-      <Button
-        title="Go Back to Home Screen"
-        onPress={() => navigation.goBack()}
-      />
+      <TouchableOpacity
+        style={{padding: 20, backgroundColor: 'blue', borderRadius: 10}}
+        onPress={() => navigation.goBack()}>
+        <Text style={{color: 'white'}}>Go Back</Text>
+      </TouchableOpacity>
     </View>
   );
 }
